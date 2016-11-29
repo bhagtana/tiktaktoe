@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>tiktaktoe</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="index.js"></script>
+
+	<style type="text/css">
+		#outer {
+			background-color: white;
+			width: 1900px;
+			height: 900px;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		#inner {
+			background-color: #ccc;
+			width: 600px;
+			height:600px;
+			border-top-right-radius: 20px;
+			border-top-left-radius: 20px;
+			border-bottom-right-radius: 20px;
+			border-bottom-left-radius: 20px;
+		}
+		#innerbox {
+			display: flex;
+			justify-content: center;
+		}
+		#smallbox {
+			background-color: transparent;
+			margin-top: 40px;
+		}
+		.box {
+			color: white;
+			background-color: #7FDBFF;
+			width: 7vw;
+			height: 7vw;
+			margin: 20px;
+			border: 3px solid white;
+			border-top-right-radius: 20px;
+			border-top-left-radius: 20px;
+			border-bottom-right-radius: 20px;
+			border-bottom-left-radius: 20px;
+			transition-property: transform;
+    		transition-duration: 1s;
+		}
+		.box:hover {
+		    animation-name: rotate; 
+		    animation-duration: 2s; 
+		    animation-iteration-count: infinite;
+		    animation-timing-function: linear;
+		}
+		@keyframes rotate {
+		    from {transform: rotate(0deg);}
+		    to {transform: rotate(360deg);}
+		}
+	</style>
+</head>
+<body>
+	<div id="outer">
+		<div id="inner">
+			<div id="innerbox">
+				<div id="smallbox">
+					<div>
+						<button class="box 2" value='4'>4</button>
+						<button class="box 1" value='1'>1</button>
+						<button class="box 3" value='7'>7</button>
+					</div>
+					<div>
+						<button class="box 4" value='2'>2</button>
+						<button class="box 5">5</button>
+						<button class="box 6">8</button>
+					</div>
+					<div>
+						<button class="box 7">3</button>
+						<button class="box 8">6</button>
+						<button class="box 9">9</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
