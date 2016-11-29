@@ -5,6 +5,8 @@
 //     console.log($('.box').val());
 //    });
 // });
+
+// this is a comment.
 var result = document.getElementsByClassName('box');
 
 console.log(result.length);
