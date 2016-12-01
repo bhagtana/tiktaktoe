@@ -47,11 +47,11 @@ function change(ele) {
 	if (count >= 3 && count < 9) {
 		if (decide(result1)) {
 			var messageHTML = $("<div></div>");
-			messageHTML.html("X Have Won the Game").appendTo($('.result'));
+			messageHTML.html("X has Won the Game").appendTo($('.result'));
 			alert('X have Won the Game');
 		} else if (decide(result)) {
 			var messageHTML = $("<div></div>");
-			messageHTML.html("O Have Won the Game").appendTo($('.result'));
+			messageHTML.html("O has Won the Game").appendTo($('.result'));
 			alert('O have Won the Game');
 		} 
 	} else if (count === 9) {
