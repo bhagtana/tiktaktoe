@@ -31,22 +31,32 @@ var result = [];
 var result1 = [];
 function change(ele) {
 	    count++;
+	    $('.result').empty();
 	    if (count % 2 === 0) {
-	      //decide(ele.value);
 	      result.push(ele.value);
 	      ele.value = 'O';
+	      var message = $('<div></div>');
+	      message.html("It is X's turn").appendTo(".result");
 	} else {
-		  //decide(ele.value);
+		  $('.result').empty();
 		  result1.push(ele.value);
 		  ele.value = 'X';
+		  var message = $('<div></div>');
+	      message.html("It is O's turn").appendTo(".result");
 	}
-	if (count === 9) {
+	if (count >= 3 && count < 9) {
 		if (decide(result1)) {
+			var messageHTML = $("<div></div>");
+			messageHTML.html("X Have Won the Game").appendTo($('.result'));
 			alert('X have Won the Game');
 		} else if (decide(result)) {
+			var messageHTML = $("<div></div>");
+			messageHTML.html("O Have Won the Game").appendTo($('.result'));
 			alert('O have Won the Game');
-		} else {
+		} 
+	} else if (count === 9) {
+			var messageHTML = $("<div></div>");
+			messageHTML.html("It is a DRAW GAVEOVER").appendTo($('.result'));
 			alert("NO ONE WON, PLEASE REFRESH THE BROWSER TO PLAY AGAIN");
 		}
-	}
 }// we cannot define function inside the document.ready cuz it does not have enough scope to be called from.
