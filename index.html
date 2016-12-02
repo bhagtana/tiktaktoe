@@ -7,10 +7,9 @@
 
 	<style type="text/css">
 		#outer {
-			background-color: white;
-			width: 1900px;
+			background-color: green;
+		    width: 1900px;
 			height: 900px;
-
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -56,27 +55,54 @@
 		    from {transform: rotate(0deg);}
 		    to {transform: rotate(360deg);}
 		}
+		.result {
+			text-align: center;
+		}
+		.boxz {
+		  width: 200px;
+		  -webkit-transition: all .2s;
+		  background: #333;
+		  line-height: 50px;
+		  text-align: center;
+		  font-weight: bold;
+		  color:#e3e3e3;
+		  border-radius: 5px;
+		  box-shadow: 0px 0px 2px 2px rgba(0,0,0,.5),
+		     1px 1px 5px rgba(0,0,0,.3);
+		  currsor: poniter;
+		}
+		.boxz:hover {
+		  background: #e3e3e3;
+		  color: #333;
+		}
+
+a:link {
+    text-decoration: none;
+}
 	</style>
 </head>
-<body>
+<body class='banner'>
 	<div id="outer">
 		<div id="inner">
+		    <a href='index.html'> <div class='boxz'> Start Again </div></a>
+		    <h3 class='result'></h3>
 			<div id="innerbox">
 				<div id="smallbox">
 					<div>
-						<button class="box 2" value='4'>4</button>
-						<button class="box 1" value='1'>1</button>
-						<button class="box 3" value='7'>7</button>
+                        <input type="button" class='box 1' value="1" onclick="return change(this);" />
+        			    <input type="button" class='box 2' value="2" onclick="return change(this);" />
+						<input type="button" class='box 3' value="3" onclick="return change(this);" />
+
 					</div>
 					<div>
-						<button class="box 4" value='2'>2</button>
-						<button class="box 5">5</button>
-						<button class="box 6">8</button>
+                        <input type="button" class='box 4' value="4" onclick="return change(this);" />
+        			    <input type="button" class='box 5' value="5" onclick="return change(this);" />
+						<input type="button" class='box 6' value="6" onclick="return change(this);" />
 					</div>
 					<div>
-						<button class="box 7">3</button>
-						<button class="box 8">6</button>
-						<button class="box 9">9</button>
+                        <input type="button" class='box 7' value="7" onclick="return change(this);" />
+        			    <input type="button" class='box 8' value="8" onclick="return change(this);" />
+						<input type="button" class='box 9' value="9" onclick="return change(this);" />
 					</div>
 				</div>
 			</div>
